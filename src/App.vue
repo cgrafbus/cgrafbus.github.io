@@ -172,7 +172,7 @@ p {
 }
 
 #expline {
-  width: 15px;
+  width: 10px;
   border-radius: 5px;
   opacity: 50%;
   height: auto;
@@ -261,6 +261,10 @@ h3 {
     margin: 2vw;
     padding: 0;
     border-width: 0px;
+  }
+
+  #expline {
+    width: 4vw;
   }
 
   #sidepanel {
