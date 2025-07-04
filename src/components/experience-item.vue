@@ -51,7 +51,7 @@ const resolvedIcon = new URL(`../assets/icons/${props.iconsource}.png`, import.m
 
 .expdate {
   font-weight: bold;
-  text-align: right;
+  text-align: center;
 }
 
 .expitem {

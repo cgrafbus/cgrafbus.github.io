@@ -219,6 +219,13 @@ h3 {
     gap: 2rem;
   }
 
+  #wrapper {
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0;
+    border-width: 0px;
+  }
+
   #sidepanel {
     width: 100%;
   }
