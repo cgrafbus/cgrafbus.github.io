@@ -24,11 +24,9 @@ const resolvedIcon = new URL(`../assets/icons/${props.iconsource}.png`, import.m
 
 <template>
   <div class="expitem">
-    <div class="exp">
-      <img :src="resolvedIcon" class="expicon" />
-      <div class="expdate">{{ fromdate }} - {{ untildate }}</div>
-    </div>
+    <img :src="resolvedIcon" class="expicon" />
     <div class="expheader">{{ header }}</div>
+    <div class="expdate">{{ fromdate }} - {{ untildate }}</div>
     <p>
       {{ content }}
     </p>
@@ -41,17 +39,9 @@ const resolvedIcon = new URL(`../assets/icons/${props.iconsource}.png`, import.m
   flex-direction: row;
 }
 
-.exp {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: start;
-  width: 100%;
-}
-
 .expdate {
   font-weight: bold;
-  text-align: center;
+  color: var(--text-secondary);
 }
 
 .expitem {
@@ -72,5 +62,11 @@ const resolvedIcon = new URL(`../assets/icons/${props.iconsource}.png`, import.m
   color: var(--text-primary);
   font-weight: bolder;
   font-size: larger;
+}
+
+@media (max-width: 900px) {
+  .expicon {
+    width: 100px;
+  }
 }
 </style>

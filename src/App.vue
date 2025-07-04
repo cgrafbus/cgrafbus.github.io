@@ -172,12 +172,16 @@ p {
 }
 
 #expline {
-  width: 5px;
+  width: 15px;
   border-radius: 5px;
   opacity: 50%;
   height: auto;
   margin-left: 0.5rem;
-  background-color: var(--accent);
+  background: linear-gradient(0deg, var(--accent-dark), var(--accent), var(--accent-light));
+
+  -webkit-animation: GradientAnim 5s ease infinite;
+  -moz-animation: GradientAnim 5s ease infinite;
+  animation: GradientAnim 5s ease infinite;
 }
 
 h1 {
@@ -199,16 +203,50 @@ h3 {
 }
 
 #profilephoto {
+  image-rendering: auto !important;
   border-radius: 100%;
   width: 180px;
   height: 180px;
-  image-rendering: optimizeQuality;
 }
 
 #expcontainer {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 20px;
+}
+
+@-webkit-keyframes GradientAnim {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+@-moz-keyframes GradientAnim {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
+}
+@keyframes GradientAnim {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -220,8 +258,7 @@ h3 {
   }
 
   #wrapper {
-    margin: 0;
-    margin-top: 2rem;
+    margin: 2vw;
     padding: 0;
     border-width: 0px;
   }
