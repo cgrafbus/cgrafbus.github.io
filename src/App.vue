@@ -177,7 +177,7 @@ p {
   opacity: 50%;
   height: auto;
   margin-left: 0.5rem;
-  background: linear-gradient(0deg, var(--accent-dark), var(--accent), var(--accent-light));
+  background: linear-gradient(50deg, var(--accent-dark), var(--accent), var(--accent-light));
 
   -webkit-animation: GradientAnim 5s ease infinite;
   -moz-animation: GradientAnim 5s ease infinite;
