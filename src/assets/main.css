@@ -1,0 +1,11 @@
+@import './base.css';
+
+.stack-horizontal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 2px;
+  align-items: center;
+}
+
