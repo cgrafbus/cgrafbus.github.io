@@ -1,44 +1,44 @@
 <script setup>
 let props = defineProps({
   header: {
-    type:String,
-    required: true
+    type: String,
+    required: true,
   },
   iconsource: {
     type: String,
     required: true,
   },
-  content:{
-    type:String,
-    required: true
+  content: {
+    type: String,
+    required: true,
   },
   fromdate: {
-    type:String,
+    type: String,
   },
   untildate: {
-    type:String
-  }
-});
-const resolvedIcon = new URL(`../assets/icons/${props.iconsource}.png`, import.meta.url).href;
+    type: String,
+  },
+})
+const resolvedIcon = new URL(`../assets/icons/${props.iconsource}.png`, import.meta.url).href
 </script>
 
 <template>
   <div class="expitem">
     <div class="exp">
-        <img :src="resolvedIcon" class="expicon"/>
-        <div class="expdate">{{ fromdate }} - {{ untildate }}</div>
+      <img :src="resolvedIcon" class="expicon" />
+      <div class="expdate">{{ fromdate }} - {{ untildate }}</div>
     </div>
     <div class="expheader">{{ header }}</div>
     <p>
-     {{ content }}
+      {{ content }}
     </p>
-</div>
+  </div>
 </template>
 
 <style scoped>
 .exp {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .exp {
@@ -49,9 +49,9 @@ const resolvedIcon = new URL(`../assets/icons/${props.iconsource}.png`, import.m
   width: 100%;
 }
 
-.expdate{
-    font-weight: bold;
-    text-align: right;
+.expdate {
+  font-weight: bold;
+  text-align: right;
 }
 
 .expitem {

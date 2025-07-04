@@ -1,9 +1,8 @@
 <script setup>
-import ExperienceItem from './components/experience-item.vue';
-import SkillStack from './components/skill-stack.vue';
-import linkedinicon from '@/assets/icons/linkedin.png';
-import profilepic from '@/assets/icons/pb.png';
-
+import ExperienceItem from './components/experience-item.vue'
+import SkillStack from './components/skill-stack.vue'
+import linkedinicon from '@/assets/icons/linkedin.png'
+import profilepic from '@/assets/icons/pb.png'
 </script>
 
 <template>
@@ -11,84 +10,78 @@ import profilepic from '@/assets/icons/pb.png';
     <div id="wrapper">
       <div id="layout">
         <div id="sidepanel">
-          <img id="profilephoto" :src='profilepic' />
+          <img id="profilephoto" :src="profilepic" />
           <h2>Claudio Graf</h2>
           <p id="devdesc">Software Developer</p>
           <p id="devdesc">Donaueschingen, Germany</p>
           <div class="stack-horizontal actionpanel">
             <a href="https://github.com/cgrafbus" target="_blank">
-              <img
-                src="https://cdn.simpleicons.org/github/d6d6d6"
-                alt="GitHub Icon"
-              />
+              <img src="https://cdn.simpleicons.org/github/d6d6d6" alt="GitHub Icon" />
             </a>
-            <a
-              href="https://www.linkedin.com/in/claudio-graf-80004a290/"
-              target="_blank"
-            >
-              <img :src='linkedinicon' alt="LinkedIn Icon" />
+            <a href="https://www.linkedin.com/in/claudio-graf-80004a290/" target="_blank">
+              <img :src="linkedinicon" alt="LinkedIn Icon" />
             </a>
             <a href="mailto:claudio.graf.bus@gmail.com">
-              <img
-                src="https://cdn.simpleicons.org/gmail/d6d6d6"
-                alt="Gmail Icon"
-              />
+              <img src="https://cdn.simpleicons.org/gmail/d6d6d6" alt="Gmail Icon" />
             </a>
           </div>
         </div>
         <div id="contentpanel">
           <h1>About Me</h1>
           <p>
-            I'm a software developer specializing in C# and desktop application
-            development. In addition to my professional work, I also build
-            personal projects focused on practical and maintainable software
-            solutions.
+            I'm a software developer specializing in C# and desktop application development. In
+            addition to my professional work, I also build personal projects focused on practical
+            and maintainable software solutions.
           </p>
           <p>
-            My main interest lies in creating applications that are reliable,
-            efficient, and genuinely helpful to users. I prioritize writing
-            clean, well-structured code and designing solutions that solve
-            real-world problems without unnecessary complexity.
+            My main interest lies in creating applications that are reliable, efficient, and
+            genuinely helpful to users. I prioritize writing clean, well-structured code and
+            designing solutions that solve real-world problems without unnecessary complexity.
           </p>
           <p>
-            I approach software development as both a profession and a
-            continuous learning process. Each project brings new challenges that
-            I address with attention to detail and a focus on long-term
-            maintainability.
+            I approach software development as both a profession and a continuous learning process.
+            Each project brings new challenges that I address with attention to detail and a focus
+            on long-term maintainability.
           </p>
           <h3>Skills</h3>
-          <SkillStack header="Languages" 
-            :items="['C#', 'Java']" 
-            background="#211635">
+          <SkillStack header="Languages" :items="['C#', 'Java']" background="#211635"> </SkillStack>
+          <SkillStack
+            header="Frameworks"
+            :items="['WPF', 'WinForms', 'AvaloniaUI', 'ASP.Net']"
+            background="#2e1a46"
+          >
           </SkillStack>
-          <SkillStack header="Frameworks" 
-            :items="['WPF', 'WinForms', 'AvaloniaUI', 'ASP.Net']" 
-            background="#2e1a46">
+          <SkillStack
+            header="Databases"
+            :items="['SQL-Server', 'MySQL', 'Oracle']"
+            background="#3c2555"
+          >
           </SkillStack>
-          <SkillStack header="Databases" 
-            :items="['SQL-Server', 'MySQL', 'Oracle']" 
-            background="#3c2555">
+          <SkillStack
+            header="Practices"
+            :items="['Agile / Scrum', 'Clean Architecture', 'Unit Testing']"
+            background="#462c64"
+          >
           </SkillStack>
-          <SkillStack header="Practices" 
-            :items="['Agile / Scrum', 'Clean Architecture', 'Unit Testing']" 
-            background="#462c64">
-          </SkillStack>
-          <SkillStack header="Other" 
-            :items="['Git', 'DevOps', 'CI/CD', 'REST APIs', 'Postman', 'JSON']" 
-            background="#512f79">
+          <SkillStack
+            header="Other"
+            :items="['Git', 'DevOps', 'CI/CD', 'REST APIs', 'Postman', 'JSON']"
+            background="#512f79"
+          >
           </SkillStack>
           <h3>Experience</h3>
           <div id="expcontainer">
             <div id="expline"></div>
-          <ExperienceItem header="Sage GmbH" 
-            fromdate="September 2023"
-            untildate="Today"
-            iconsource="sagelogo" 
-            content=
-              "Developing and maintaining Sage Wincarat, an ERP system specialized in plastic production,
+            <ExperienceItem
+              header="Sage GmbH"
+              fromdate="September 2023"
+              untildate="Today"
+              iconsource="sagelogo"
+              content="Developing and maintaining Sage Wincarat, an ERP system specialized in plastic production,
               using WinForms, C#, SQL Server and Oracle. Responsibilites include customizing business
-              logic, improving legacy code and ensuring system stability for our clients.">
-          </ExperienceItem>
+              logic, improving legacy code and ensuring system stability for our clients."
+            >
+            </ExperienceItem>
           </div>
         </div>
       </div>
@@ -230,6 +223,4 @@ h3 {
     width: 100%;
   }
 }
-
-
 </style>

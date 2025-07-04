@@ -1,35 +1,35 @@
 <script setup>
 defineProps({
   header: {
-    type:String,
-    required: true
+    type: String,
+    required: true,
   },
   items: {
     type: Array,
-    required: true
+    required: true,
   },
   background: {
     type: String,
-    required: true
-  }
-});
+    required: true,
+  },
+})
 </script>
 
 <template>
   <h4>{{ header }}</h4>
-  <div class="stack-horizontal" >
-    <div 
-      v-for="skill in items" 
-      :key="skill" 
-      class="skillitem" 
-      :style="{backgroundColor: background}"> 
+  <div class="stack-horizontal">
+    <div
+      v-for="skill in items"
+      :key="skill"
+      class="skillitem"
+      :style="{ backgroundColor: background }"
+    >
       {{ skill }}
     </div>
   </div>
 </template>
 
 <style scoped>
-
 .skillitem {
   transition-duration: 0.2s;
   border-radius: 9999px;
@@ -49,5 +49,4 @@ h4 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
-
 </style>
